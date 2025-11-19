@@ -7,13 +7,16 @@
     "express": "^4"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^2",
-    "typescript": "^5.9.3",
-    "@cap-js/cds-types": "^0.15.0",
-    "@types/node": "^22.0.0",
-    "tsx": "^4",
     "@cap-js/cds-typer": ">=0.1",
-    "cds-plugin-ui5": "^0.13.0"
+    "@cap-js/cds-types": "^0.15.0",
+    "@cap-js/sqlite": "^2",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "cds-plugin-ui5": "^0.13.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "tsx": "^4",
+    "typescript": "^5.9.3"
   },
   "cds": {
     "requires": {
