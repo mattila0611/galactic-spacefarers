@@ -1,0 +1,48 @@
+{
+  "name": "cpa",
+  "version": "1.0.0",
+  "description": "Galactic Spacefarer Adventure",
+  "dependencies": {
+    "@sap/cds": "^9",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "typescript": "^5.9.3",
+    "@cap-js/cds-types": "^0.15.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4",
+    "@cap-js/cds-typer": ">=0.1",
+    "cds-plugin-ui5": "^0.13.0"
+  },
+  "cds": {
+    "requires": {
+      "auth": {
+        "kind": "basic",
+        "users": {
+          "captain": {
+            "password": "secret",
+            "roles": [
+              "authenticated-user"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-galactic-spacefarers": "cds watch --open galacticspacefarers/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "init-project": "npm install && npx cds deploy --to sqlite:db.sqlite"
+  },
+  "private": true,
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/galactic-spacefarers"
+  ]
+}

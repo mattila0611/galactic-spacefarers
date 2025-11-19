@@ -1,0 +1,21 @@
+{
+  "name": "cap",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": { "VARIANT": "24" }
+  },
+  "postCreateCommand": "npm install && npx cds deploy --to sqlite:db.sqlite",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "sapse.vscode-cds",
+        "dbaeumer.vscode-eslint",
+        "humao.rest-client",
+        "qwtel.sqlite-viewer",
+        "mechatroner.rainbow-csv"
+      ]
+    }
+  },
+  "forwardPorts": [ 4004 ],
+  "remoteUser": "node"
+}
