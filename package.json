@@ -36,7 +36,8 @@
   "scripts": {
     "start": "cds-serve",
     "watch-galactic-spacefarers": "cds watch --open galacticspacefarers/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "init-project": "npm install && npx cds deploy --to sqlite:db.sqlite"
+    "init-project": "npm install && npx cds deploy --to sqlite:db.sqlite",
+    "test": "jest"
   },
   "private": true,
   "imports": {
